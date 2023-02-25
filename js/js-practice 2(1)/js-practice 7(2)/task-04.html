@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <style>
+    .container {
+      display: grid;
+      grid-template: repeat(auto-fit, minmax(200px, 250px)) / repeat(2, 1fr);
+      align-content: center center;
+    }
+
+    .item {
+      margin: 30px;      
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .blur-up {
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+      transition: filter 400ms, -webkit-filter 400ms;
+    }
+    .blur-up.lazyloaded {
+      -webkit-filter: blur(0);
+      filter: blur(0);
+    }
+  </style>
+  <body>
+    <div class="container"></div>
+    <script src="js/task-04.js" type="module"></script>
+  </body>
+</html>
